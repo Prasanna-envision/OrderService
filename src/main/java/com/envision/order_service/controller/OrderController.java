@@ -18,6 +18,7 @@ public class OrderController {
     private OrderService orderService;
     @PostMapping("/bookOrder")
     public TransactionResponse bookOrder(@RequestBody TransactionRequest request){
+        System.out.println("Booking order");
         return orderService.saveOrder(request);
     }
 }
